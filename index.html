@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ModalDatePicker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: lightblue; font-family: Helvetica">
+        <div style="text-align: center; background-color: lightblue; width: 70%; margin: auto">
+            <h1>Reusable Modal Date Picker</h1>
+            <h2>John Murray</h2>
+            <h3>
+                The component that I have created is a reusable framework to build a modal date picker. It includes a button that displays the 
+                selected date (today by default), and when the button is clicked opens up a modal containing a calendar. The user can select 
+                any date from the calendar as well as navigate between different months and years. The component will keep the dates and weekdays aligned 
+                properly.
+            </h3>
+            <h3>
+                The component also accepts several optional parameters (nested in the single params object) such as width, height, headerColor, bodyColor,
+                font, and highlight. These optional parameters allow for additional styling to fit your visual needs or preferences.
+            </h3>
+            <h3>
+                Click <a href="download/demo.html"> here </a> to see my demo code.
+            </h3>
+            <h3>
+                <a href="download.zip">Download my component</a>
+            </h3>
+            <h3>
+                This project required a lot of planning and careful naming of each variable. It took me a while to figure out how to properly display the days in alignment 
+                with the correct weekdays. Here is the algorithm that I came up with to calculate it: 
+            </h3>
+            <div>
+                  <pre style="font-size: 20px">
+                    // Returns number of days in month
+                            function daysInMonth(month, year) {
+                                    let date = new Date(year, month+1, 0);
+                                    return date.getDate();
+                            }
+
+                    //  Returns first day of week (0-6)
+                            function loadCalendarDays(month, year) {
+                                    var date = new Date(year, month, 1);
+                                    var dayofweek = date.getDay();      
+                                    return dayofweek + 1;
+                            }
+
+                            var firstWeekday = loadCalendarDays(selectedMonth, selectedYear);
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>

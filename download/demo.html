@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DatePicker Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="datePickerStyle.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        
+        <div style="margin: auto">
+            <button id="modal-button1" style="background-color: lightblue; font-size: 24px"></button>
+            <div id="datepicker1" class="modal"></div>
+            
+            <button id="modal-button2" style="background-color: lightgreen; font-size: 24px"></button>
+            <div id="datepicker2" class="modal">
+            </div>
+        </div>
+        
+        <script src="makeDatePickerModal.js"></script>
+        <script>
+            "use strict";
+            var datepicker1 = document.getElementById("datepicker1");
+            var modalBtn1 = document.getElementById("modal-button1");
+            var params1 = {};
+            params1.modalTarget = "datepicker1";
+            params1.targetBtn = "modal-button1";
+            params1.headerColor = "lightblue";
+            params1.bodyColor = "white";
+            params1.height = "300px";
+            params1.width = "400px";
+            params1.highlight = "lightblue";
+            var dp1 = makeDatePickerModal(params1);
+            
+             var datepicker2 = document.getElementById("datepicker2");
+            var modalBtn2 = document.getElementById("modal-button2");
+            var params2 = {};
+            params2.modalTarget = "datepicker2";
+            params2.targetBtn = "modal-button2";
+            params2.headerColor = "lightgreen";
+            params2.bodyColor = "white";
+            params2.height = "600px";
+            params2.width = "800px";
+            var dp2 = makeDatePickerModal(params2);
+            
+            console.log(dp1.getSelectedDate());
+        </script>
+    </body>
+</html>
