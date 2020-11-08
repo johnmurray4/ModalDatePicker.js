@@ -6,5 +6,5 @@ The component will keep the dates and weekdays aligned properly.
 The component also accepts several optional parameters (nested in the single params object) such as width, height, headerColor, bodyColor, font, and highlight. 
 These optional parameters allow for additional styling to fit your visual needs or preferences.
 
-makeDatePickerModal.js is the function to be called when instantiating a component. 
-demo.html shows two examples of the component in use and demonstrates how you can instantiate it.
+download/makeDatePickerModal.js is the function to be called when instantiating a component. 
+download/demo.html shows two examples of the component in use and demonstrates how you can instantiate it.
